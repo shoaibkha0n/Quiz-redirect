@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      // Bot list
+      const bots = ["Googlebot", "Adsterrabot", "crawler", "spider", "bot"];
+      const ua = navigator.userAgent;
+
+      let isBot = bots.some(bot => ua.toLowerCase().includes(bot.toLowerCase()));
+
+      if (isBot) {
+        document.write("<h1>Welcome to FunQuizzr!</h1>");
+      } else {
+        setTimeout(() => {
+          window.location.href = "https://funquizzr.blogspot.com/2025/06/can-you-guess-these-movies-just-from.html";
+        }, 5000);
+      }
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to quiz page, please wait...</p>
+  </body>
+</html>
